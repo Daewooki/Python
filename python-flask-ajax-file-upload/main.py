@@ -32,7 +32,7 @@ def upload_file():
 			file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
 			success = True
 		else:
-			errors[file.filename] = 'File type is not allowed'
+			errors['message'] = 'File type is not allowed'
 	
 	if success and errors:
 		errors['message'] = 'File(s) successfully uploaded'
